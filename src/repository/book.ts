@@ -19,7 +19,11 @@ export default class BookRepository {
   }
 
   public async getAll(): Promise<Book[] | Model[]> {
-    return await this.model.findAll({ raw: true, attributes: ["id", "name"] });
+    return await this.model.findAll({
+      raw: true,
+      attributes: ["id", "name"],
+      order: [["id", "ASC"]],
+    });
   }
 
   public async getById(

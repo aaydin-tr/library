@@ -16,14 +16,21 @@ export default class UserRepository {
   }
 
   public async getAll(): Promise<User[] | Model[]> {
-    return await this.model.findAll({ raw: true, attributes: ["id", "name"] });
+    return await this.model.findAll({
+      raw: true,
+      attributes: ["id", "name"],
+      order: [["id", "ASC"]],
+    });
   }
 
   public async getById<T>(id: number): Promise<User | Model | null> {
     return await this.model.findOne({
       where: { id },
       attributes: ["id", "name"],
-      include: ["books", { association: "books_activities", include: ["book"] }],
+      include: [
+        "books",
+        { association: "books_activities", include: ["book"] },
+      ],
     });
   }
 
