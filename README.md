@@ -23,7 +23,7 @@ TypeScript-based web application developed using Node.js for managing library tr
 
 ## Overview
 
-The Library Management System is designed to facilitate the borrowing and returning of books from a library. The application enables users to perform various actions related to managing users, books, and their borrowing activities. The system is built using TypeScript and Node.js, creating a REST API that interacts with a PostgreSQL database. It adheres to the requirements outlined in the project document and responds to requests in a format compatible with the provided Postman Collection.
+The Library Management System is designed to facilitate the borrowing and returning of books from a library. The application enables users to perform various actions related to managing users, books, and their borrowing activities. The system is built using TypeScript and Node.js, creating a REST API that interacts with a PostgreSQL database. 
 
 ## Project Structure
 
