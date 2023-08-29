@@ -75,7 +75,7 @@ export default class UserService {
     if (book.user_id) {
       throw new CustomError(
         "Book is already borrowed",
-        HTTPStatuses.BAD_REQUEST
+        HTTPStatuses.UNAUTHORIZED
       );
     }
 
@@ -110,7 +110,7 @@ export default class UserService {
     if (book.user_id !== userId) {
       throw new CustomError(
         "Book is borrowed by another user",
-        HTTPStatuses.BAD_REQUEST
+        HTTPStatuses.UNAUTHORIZED
       );
     }
 
