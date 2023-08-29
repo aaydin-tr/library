@@ -34,7 +34,7 @@ export default class BookService {
     return {
       id: book.id,
       name: book.name,
-      score: book.score,
+      score: book.score.toFixed(2),
     }
   }
 }
