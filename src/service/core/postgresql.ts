@@ -40,7 +40,7 @@ export default class Postgresql {
       const model = require(`${modelsPath}/${modelFile}`).default;
       const schema = this.sequelize.define(model.tableName, model.attributes);
 
-      await schema.sync({ force: true });
+      await schema.sync();
       this.models[model.tableName] = schema;
     }
 
